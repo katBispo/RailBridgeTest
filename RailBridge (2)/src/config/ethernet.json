@@ -1,0 +1,51 @@
+{
+  "development": {
+    "port": 7171,
+    "pollInterval": 3000, 
+    "recallFrequency": 5, 
+    "disconnectPeriod": 3, 
+    "timeoutLimit": 5000,
+    "POLL_WITHOUT_CRC": false,
+    "remotes": [
+      {"address": "localhost", "protocol": "genisys", "remoteId": 2, "words": 30, "remotePort": 7169},
+      {"address": "localhost", "protocol": "genisys", "remoteId": 3, "words": 30, "remotePort": 7169},
+      {"address": "localhost", "protocol": "genisys", "remoteId": 4, "words": 30, "remotePort": 7169}
+    ]
+  },
+  "testing": {
+    "port": 7169,
+    "pollInterval": 3000, 
+    "recallFrequency": 5, 
+    "disconnectPeriod": 3, 
+    "timeoutLimit": 5000,
+    "POLL_WITHOUT_CRC": false,
+    "remotes": [
+      {"address": "localhost", "protocol": "bcs", "remoteId": 3, "words": 50, "remotePort": 7169},
+      {"address": "localhost", "protocol": "bcs", "remoteId": 4, "words": 50, "remotePort": 7169}
+    ]
+  },
+  "staging": {
+    "port": 7169,
+    "pollInterval": 3000, 
+    "recallFrequency": 5, 
+    "disconnectPeriod": 3, 
+    "timeoutLimit": 5000,
+    "POLL_WITHOUT_CRC": false,
+    "remotes": [
+      {"address": "localhost", "protocol": "bcs", "remoteId": 3, "words": 50, "remotePort": 7169},
+      {"address": "localhost", "protocol": "bcs", "remoteId": 4, "words": 50, "remotePort": 7169}
+    ]
+  },
+  "production": {
+    "port": 7169,
+    "pollInterval": 3000, 
+    "recallFrequency": 5, 
+    "disconnectPeriod": 3, 
+    "timeoutLimit": 5000,
+    "POLL_WITHOUT_CRC": false,
+    "remotes": [
+      {"address": "localhost", "protocol": "bcs", "remoteId": 3, "words": 50, "remotePort": 7169},
+      {"address": "localhost", "protocol": "bcs", "remoteId": 4, "words": 50, "remotePort": 7169}
+    ]
+  }
+}

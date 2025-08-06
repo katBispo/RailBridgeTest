@@ -1,0 +1,22 @@
+{
+  "development": {
+    "multicast_interface": "192.168.0.17",
+    "multicast_ip": "230.0.0.8",
+    "multicast_port": 6700
+},
+  "testing": {
+    "multicast_interface": "192.168.0.17",
+    "multicast_ip": "230.0.0.8",
+    "multicast_port": 6700
+  },
+  "staging": {
+    "multicast_interface": "192.168.0.17",
+    "multicast_ip": "230.0.0.8",
+    "multicast_port": 6700
+  },
+  "production": {
+    "multicast_interface": "192.168.0.17",
+    "multicast_ip": "230.0.0.8",
+    "multicast_port": 6700
+  }
+}

@@ -1,0 +1,35 @@
+INICIAR AMBIENTE
+sudo docker exec -it rabbitmq bash
+
+
+Publicação de comando:
+sudo docker exec rabbitmq rabbitmqadmin publish exchange=commandExchange routing_key=users.test payload='{"section":4,"remote":2,"type":"COMMAND","port":1,"value":1}'
+
+sudo docker exec rabbitmq rabbitmqadmin publish exchange=commandExchange routing_key=users.test payload='{"section":4,"remote":2,"type":"command","port":1,"value":1}'
+
+
+
+LOG QUANDO DEU CERTO
+uan@kauan-HP-ProBook-440-G3:~/Downloads/RailBridge (2)$ npm start
+RailBridge@1.0.0 start
+node src/index.js ethernet
+NODE_ENV: development
+environment: development
+2025-08-06T18:03:47.356 [info]: @@@ Consumidor inicializado para exchange commandExchange, fila comands.section.4
+2025-08-06T18:03:47.359 [info]: @@@ Genisys inicializado para remoto 2, address: localhost, port: 7171, listenmode: false
+2025-08-06T18:03:47.360 [info]: @@@ Genisys inicializado para remoto 3, address: localhost, port: 7171, listenmode: false
+2025-08-06T18:03:47.361 [info]: @@@ Genisys inicializado para remoto 4, address: localhost, port: 7171, listenmode: false
+2025-08-06T18:03:47.419 [info]: Connected to KeepAliveControl
+2025-08-06T18:03:47.424 [info]: Received activate command but mqClient not ready!!!
+2025-08-06T18:03:47.445 [info]: RabbitMQ Connection successfully (re)established
+2025-08-06T18:03:47.445 [info]: @@@ Setup: [indicationExchange:fanout -> indications:60000]
+2025-08-06T18:03:47.447 [info]: @@@ Re-starting polling process after MQ connection re-established
+2025-08-06T18:03:47.448 [info]: @@@ Conected
+2025-08-06T18:03:47.452 [info]: RabbitMQ Connection successfully (re)established
+2025-08-06T18:03:50.361 [info]: @@@ Verificando remoto 2: ativo=true, commandQueue=[]
+2025-08-06T18:03:50.363 [info]: > fd 02 c1 51 f6 to localhost:7171
+2025-08-06T18:03:50.363 [info]: @@@ Verificando remoto 3: ativo=true, commandQueue=[]
+2025-08-06T18:03:50.364 [info]: > fd 03 00 91 f6 to localhost:7171
+2025-08-06T18:03:50.365 [info]: @@@ Verificando remoto 4: ativo=true, commandQueue=[]
+2025-08-06T18:03:50.366 [info]: > fd 04 41 53 f6 to localhost:7171
+2025-08-06T18:03:50.367 [info]: < fd 02 c1 51 f6
