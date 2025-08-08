@@ -104,8 +104,18 @@ class BCS extends Protocol {
     if(this.available) {
       this.available = false;
       this.time = new Date();
-      const message = this.buildMessage(data.port, data.value);
+      //const message = this.buildMessage(data.port, data.value); old message
+      const message  = this.buildMessage('COMMAND', data.port - 1, data.value);
       this.send(message);
+
+      //add novo codigo:
+      setTimeout(() =>{
+        this.available = true;
+        console.log(`@@@ available redefinido para remoto  ${this.remoteId}`);
+      }, 1000);
+    
+    }else{
+      console.log(`@@@ Comando não enviado para remota ${this.remoteId}: available=${this.available}, listenmode=${this.listenmode}`);
     }
   }
   
